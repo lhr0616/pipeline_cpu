@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../RISCV_FPGA.srcs/sources_1/ip/mult_gen_dsp/sim/mult_gen_dsp.vhd" \
+"../../../../RISCV_FPGA.srcs/sources_1/ip/mult_gen_lut/sim/mult_gen_lut.vhd" \
+
+# Do not sort compile order
+nosort

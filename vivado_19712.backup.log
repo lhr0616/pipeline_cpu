@@ -1,0 +1,27 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Fri Jun 20 22:02:47 2025
+# Process ID: 19712
+# Current directory: D:/Lectures/RISCV/RISCV_FPGA_TrueDualPort_Example
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16820 D:\Lectures\RISCV\RISCV_FPGA_TrueDualPort_Example\RISCV_FPGA.xpr
+# Log file: D:/Lectures/RISCV/RISCV_FPGA_TrueDualPort_Example/vivado.log
+# Journal file: D:/Lectures/RISCV/RISCV_FPGA_TrueDualPort_Example\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project -read_only D:/Lectures/RISCV/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.xpr
+INFO: [Project 1-313] Project file moved from 'D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'.
+WARNING: [IP_Flow 19-2162] IP 'tdp_bram' is locked:
+* Project containing IP 'tdp_bram' is read-only. * IP definition 'Block Memory Generator (8.4)' for IP 'tdp_bram' (customized with software release 2018.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'clk_wiz_sys' is locked:
+* Project containing IP 'clk_wiz_sys' is read-only. * IP definition 'Clocking Wizard (6.0)' for IP 'clk_wiz_sys' (customized with software release 2018.2) has a different revision in the IP Catalog.
+WARNING: [Project 1-229] Project 'RISCV_FPGA.xpr' is read-only and therefore could not be upgraded for this version of Vivado.  Use 'File | Save Project As...' if you wish to save an upgraded copy.
+open_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:07 . Memory (MB): peak = 809.141 ; gain = 110.426
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Jun 20 22:06:32 2025...

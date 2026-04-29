@@ -1,0 +1,17 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Wed Apr  8 11:43:34 2026
+# Process ID: 30520
+# Current directory: D:/Lectures/RISCV/RISCV_FPGA_TrueDualPort_Example
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7752 D:\Lectures\RISCV\RISCV_FPGA_TrueDualPort_Example\RISCV_FPGA.xpr
+# Log file: D:/Lectures/RISCV/RISCV_FPGA_TrueDualPort_Example/vivado.log
+# Journal file: D:/Lectures/RISCV/RISCV_FPGA_TrueDualPort_Example\vivado.jou
+# Running On: Lary-ROG13, OS: Windows, CPU Frequency: 3294 MHz, CPU Physical cores: 16, Host memory: 33550 MB
+#-----------------------------------------------------------
+start_gui
+open_project -read_only D:/Lectures/RISCV/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.xpr
+open_run impl_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1

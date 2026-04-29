@@ -1,0 +1,121 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Fri Mar 28 21:16:02 2025
+# Process ID: 24800
+# Current directory: D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent26612 D:\project\vivadoprogram\RISCV_FPGA_TrueDualPort_Blank\RISCV_FPGA.xpr
+# Log file: D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/vivado.log
+# Journal file: D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.xpr
+export_ip_user_files -of_objects  [get_files D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sources_1/ip/mult_gen_dsp/mult_gen_dsp.xci] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sources_1/ip/mult_gen_lut/mult_gen_lut.xci] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sources_1/new/riscv_mul_booth_wallace.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sources_1/new/riscv_mul_para.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sources_1/new/riscv_mul_para_booth.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sources_1/new/riscv_pc_gen_pipelined.v] -no_script -reset -force -quiet
+remove_files  {D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sources_1/ip/mult_gen_dsp/mult_gen_dsp.xci D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sources_1/ip/mult_gen_lut/mult_gen_lut.xci D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sources_1/new/riscv_mul_booth_wallace.v D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sources_1/new/riscv_mul_para.v D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sources_1/new/riscv_mul_para_booth.v D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sources_1/new/riscv_pc_gen_pipelined.v}
+file delete -force D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sources_1/ip/mult_gen_dsp D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sources_1/ip/mult_gen_lut D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sources_1/new/riscv_mul_booth_wallace.v D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sources_1/new/riscv_mul_para.v D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sources_1/new/riscv_mul_para_booth.v D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sources_1/new/riscv_pc_gen_pipelined.v
+upgrade_ip -srcset clk_wiz_sys -vlnv xilinx.com:ip:clk_wiz:6.0 [get_ips  clk_wiz_sys] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips clk_wiz_sys] -no_script -sync -force -quiet
+generate_target all [get_files  D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sources_1/ip/clk_wiz_sys/clk_wiz_sys.xci]
+catch { config_ip_cache -export [get_ips -all clk_wiz_sys] }
+export_ip_user_files -of_objects [get_files D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sources_1/ip/clk_wiz_sys/clk_wiz_sys.xci] -no_script -sync -force -quiet
+launch_runs -jobs 8 clk_wiz_sys_synth_1
+upgrade_ip -srcset tdp_bram -vlnv xilinx.com:ip:blk_mem_gen:8.4 [get_ips  tdp_bram] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips tdp_bram] -no_script -sync -force -quiet
+generate_target all [get_files  D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sources_1/ip/tdp_bram/tdp_bram.xci]
+catch { config_ip_cache -export [get_ips -all tdp_bram] }
+export_ip_user_files -of_objects [get_files D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sources_1/ip/tdp_bram/tdp_bram.xci] -no_script -sync -force -quiet
+launch_runs -jobs 8 tdp_bram_synth_1
+export_ip_user_files -of_objects  [get_files D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sources_1/ip/tdp_bram/tdp_bram.xci] -no_script -reset -force -quiet
+remove_files  -fileset tdp_bram D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sources_1/ip/tdp_bram/tdp_bram.xci
+file delete -force D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sources_1/ip/tdp_bram
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name tpd_bram -dir d:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sources_1/ip
+set_property -dict [list CONFIG.Component_Name {tpd_bram} CONFIG.Memory_Type {True_Dual_Port_RAM} CONFIG.Assume_Synchronous_Clk {true} CONFIG.Write_Width_A {32} CONFIG.Write_Depth_A {32768} CONFIG.Read_Width_A {32} CONFIG.Write_Width_B {32} CONFIG.Read_Width_B {32} CONFIG.Enable_B {Use_ENB_Pin} CONFIG.Register_PortA_Output_of_Memory_Primitives {false} CONFIG.Register_PortB_Output_of_Memory_Primitives {false} CONFIG.Load_Init_File {true} CONFIG.Coe_File {D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/test6_tdp.coe} CONFIG.Port_B_Clock {100} CONFIG.Port_B_Write_Rate {50} CONFIG.Port_B_Enable_Rate {100}] [get_ips tpd_bram]
+generate_target {instantiation_template} [get_files d:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sources_1/ip/tpd_bram/tpd_bram.xci]
+generate_target all [get_files  d:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sources_1/ip/tpd_bram/tpd_bram.xci]
+catch { config_ip_cache -export [get_ips -all tpd_bram] }
+export_ip_user_files -of_objects [get_files d:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sources_1/ip/tpd_bram/tpd_bram.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] d:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sources_1/ip/tpd_bram/tpd_bram.xci]
+launch_runs -jobs 8 tpd_bram_synth_1
+export_simulation -of_objects [get_files d:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sources_1/ip/tpd_bram/tpd_bram.xci] -directory D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.ip_user_files/sim_scripts -ip_user_files_dir D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.ip_user_files -ipstatic_source_dir D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.cache/compile_simlib/modelsim} {questa=D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.cache/compile_simlib/questa} {riviera=D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.cache/compile_simlib/riviera} {activehdl=D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+export_ip_user_files -of_objects  [get_files D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sources_1/ip/clk_wiz_sys/clk_wiz_sys.xci] -no_script -reset -force -quiet
+remove_files  -fileset clk_wiz_sys D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sources_1/ip/clk_wiz_sys/clk_wiz_sys.xci
+file delete -force D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sources_1/ip/clk_wiz_sys
+export_ip_user_files -of_objects  [get_files d:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sources_1/ip/tpd_bram/tpd_bram.xci] -no_script -reset -force -quiet
+remove_files  -fileset tpd_bram d:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sources_1/ip/tpd_bram/tpd_bram.xci
+file delete -force d:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sources_1/ip/tpd_bram
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name tdp_bram -dir d:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sources_1/ip
+set_property -dict [list CONFIG.Component_Name {tdp_bram} CONFIG.Memory_Type {True_Dual_Port_RAM} CONFIG.Use_Byte_Write_Enable {true} CONFIG.Byte_Size {8} CONFIG.Write_Width_A {32} CONFIG.Write_Depth_A {32768} CONFIG.Read_Width_A {32} CONFIG.Write_Width_B {32} CONFIG.Read_Width_B {32} CONFIG.Enable_B {Use_ENB_Pin} CONFIG.Register_PortA_Output_of_Memory_Primitives {false} CONFIG.Register_PortB_Output_of_Memory_Primitives {false} CONFIG.Load_Init_File {true} CONFIG.Coe_File {D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/test6_tdp.coe} CONFIG.Port_B_Clock {100} CONFIG.Port_B_Write_Rate {50} CONFIG.Port_B_Enable_Rate {100}] [get_ips tdp_bram]
+generate_target {instantiation_template} [get_files d:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sources_1/ip/tdp_bram/tdp_bram.xci]
+generate_target all [get_files  d:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sources_1/ip/tdp_bram/tdp_bram.xci]
+catch { config_ip_cache -export [get_ips -all tdp_bram] }
+export_ip_user_files -of_objects [get_files d:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sources_1/ip/tdp_bram/tdp_bram.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] d:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sources_1/ip/tdp_bram/tdp_bram.xci]
+launch_runs -jobs 8 tdp_bram_synth_1
+export_simulation -of_objects [get_files d:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sources_1/ip/tdp_bram/tdp_bram.xci] -directory D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.ip_user_files/sim_scripts -ip_user_files_dir D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.ip_user_files -ipstatic_source_dir D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.cache/compile_simlib/modelsim} {questa=D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.cache/compile_simlib/questa} {riviera=D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.cache/compile_simlib/riviera} {activehdl=D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+create_ip -name clk_wiz -vendor xilinx.com -library ip -version 6.0 -module_name clk_wiz_sys -dir d:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sources_1/ip
+set_property -dict [list CONFIG.Component_Name {clk_wiz_sys} CONFIG.CLK_OUT1_PORT {clk_cpu}] [get_ips clk_wiz_sys]
+generate_target {instantiation_template} [get_files d:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sources_1/ip/clk_wiz_sys/clk_wiz_sys.xci]
+generate_target all [get_files  d:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sources_1/ip/clk_wiz_sys/clk_wiz_sys.xci]
+catch { config_ip_cache -export [get_ips -all clk_wiz_sys] }
+export_ip_user_files -of_objects [get_files d:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sources_1/ip/clk_wiz_sys/clk_wiz_sys.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] d:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sources_1/ip/clk_wiz_sys/clk_wiz_sys.xci]
+launch_runs -jobs 8 clk_wiz_sys_synth_1
+export_simulation -of_objects [get_files d:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sources_1/ip/clk_wiz_sys/clk_wiz_sys.xci] -directory D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.ip_user_files/sim_scripts -ip_user_files_dir D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.ip_user_files -ipstatic_source_dir D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.cache/compile_simlib/modelsim} {questa=D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.cache/compile_simlib/questa} {riviera=D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.cache/compile_simlib/riviera} {activehdl=D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+set_property -dict [list CONFIG.USE_RESET {false}] [get_ips clk_wiz_sys]
+generate_target all [get_files  d:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sources_1/ip/clk_wiz_sys/clk_wiz_sys.xci]
+catch { config_ip_cache -export [get_ips -all clk_wiz_sys] }
+export_ip_user_files -of_objects [get_files d:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sources_1/ip/clk_wiz_sys/clk_wiz_sys.xci] -no_script -sync -force -quiet
+reset_run clk_wiz_sys_synth_1
+launch_runs -jobs 8 clk_wiz_sys_synth_1
+export_simulation -of_objects [get_files d:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sources_1/ip/clk_wiz_sys/clk_wiz_sys.xci] -directory D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.ip_user_files/sim_scripts -ip_user_files_dir D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.ip_user_files -ipstatic_source_dir D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.cache/compile_simlib/modelsim} {questa=D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.cache/compile_simlib/questa} {riviera=D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.cache/compile_simlib/riviera} {activehdl=D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+export_ip_user_files -of_objects  [get_files D:/project/vivadoprogram/RISCV_FPGA_NoPipeline_TrueDualPort/RISCV_FPGA.srcs/sources_1/new/mmu_data_bram.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/project/vivadoprogram/RISCV_FPGA_NoPipeline_TrueDualPort/RISCV_FPGA.srcs/sources_1/new/mmu_inst_bram.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/project/vivadoprogram/RISCV_FPGA_NoPipeline_TrueDualPort/RISCV_FPGA.srcs/sources_1/new/mmu_inst_data_interconnect.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/project/vivadoprogram/RISCV_FPGA_NoPipeline_TrueDualPort/RISCV_FPGA.srcs/sources_1/new/riscv_cpu_pipelined.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/project/vivadoprogram/RISCV_FPGA_NoPipeline_TrueDualPort/RISCV_FPGA.srcs/sources_1/new/riscv_fwd.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/project/vivadoprogram/RISCV_FPGA_NoPipeline_TrueDualPort/RISCV_FPGA.srcs/sources_1/new/riscv_hazard_dtct.v] -no_script -reset -force -quiet
+remove_files  {D:/project/vivadoprogram/RISCV_FPGA_NoPipeline_TrueDualPort/RISCV_FPGA.srcs/sources_1/new/mmu_data_bram.v D:/project/vivadoprogram/RISCV_FPGA_NoPipeline_TrueDualPort/RISCV_FPGA.srcs/sources_1/new/mmu_inst_bram.v D:/project/vivadoprogram/RISCV_FPGA_NoPipeline_TrueDualPort/RISCV_FPGA.srcs/sources_1/new/mmu_inst_data_interconnect.v D:/project/vivadoprogram/RISCV_FPGA_NoPipeline_TrueDualPort/RISCV_FPGA.srcs/sources_1/new/riscv_cpu_pipelined.v D:/project/vivadoprogram/RISCV_FPGA_NoPipeline_TrueDualPort/RISCV_FPGA.srcs/sources_1/new/riscv_fwd.v D:/project/vivadoprogram/RISCV_FPGA_NoPipeline_TrueDualPort/RISCV_FPGA.srcs/sources_1/new/riscv_hazard_dtct.v}
+export_ip_user_files -of_objects  [get_files D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sources_1/new/riscv_mcu_top.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sources_1/new/riscv_mcu_axi_top.v] -no_script -reset -force -quiet
+remove_files  {D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sources_1/new/riscv_mcu_top.v D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sources_1/new/riscv_mcu_axi_top.v}
+file delete -force D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sources_1/new/riscv_mcu_top.v D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sources_1/new/riscv_mcu_axi_top.v
+export_ip_user_files -of_objects  [get_files D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sources_1/ip/data_bram/data_bram.xci] -no_script -reset -force -quiet
+remove_files  -fileset data_bram D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sources_1/ip/data_bram/data_bram.xci
+file delete -force D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sources_1/ip/data_bram
+export_ip_user_files -of_objects  [get_files D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sources_1/ip/inst_bram/inst_bram.xci] -no_script -reset -force -quiet
+remove_files  -fileset inst_bram D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sources_1/ip/inst_bram/inst_bram.xci
+file delete -force D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sources_1/ip/inst_bram
+export_ip_user_files -of_objects  [get_files D:/project/vivadoprogram/Test_Programs/test5.coe] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/project/vivadoprogram/Test_Programs/test6.coe] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/project/vivadoprogram/Test_Programs/test6_data.coe] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/project/vivadoprogram/Test_Programs/test6_tdp.coe] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/project/vivadoprogram/Test_Programs/test7.coe] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/project/vivadoprogram/Test_Programs/test7_data.coe] -no_script -reset -force -quiet
+remove_files  {D:/project/vivadoprogram/Test_Programs/test5.coe D:/project/vivadoprogram/Test_Programs/test6.coe D:/project/vivadoprogram/Test_Programs/test6_data.coe D:/project/vivadoprogram/Test_Programs/test6_tdp.coe D:/project/vivadoprogram/Test_Programs/test7.coe D:/project/vivadoprogram/Test_Programs/test7_data.coe}
+launch_simulation
+source riscv_mcu_top_tb.tcl
+run 1 us
+restart
+run 3 us
+close_sim
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+param pwropt.maxFaninFanoutToNetRatio 2000
+set_param pwropt.maxFaninFanoutToNetRatio 2000
+reset_run impl_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+export_ip_user_files -of_objects  [get_files D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sim_1/new/riscv_cpu_no_pipeline_tb.v] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sim_1/new/riscv_cpu_no_pipeline_tb.v
+file delete -force D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sim_1/new/riscv_cpu_no_pipeline_tb.v
+export_ip_user_files -of_objects  [get_files D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sim_1/new/riscv_mul_para_tb.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sim_1/new/riscv_alu_tb.v] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 {D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sim_1/new/riscv_mul_para_tb.v D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sim_1/new/riscv_alu_tb.v}
+file delete -force D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sim_1/new/riscv_mul_para_tb.v D:/project/vivadoprogram/RISCV_FPGA_TrueDualPort_Blank/RISCV_FPGA.srcs/sim_1/new/riscv_alu_tb.v

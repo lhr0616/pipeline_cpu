@@ -1,0 +1,17 @@
+0.6
+2019.2
+Nov  6 2019
+21:57:16
+D:/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.sim/sim_1/behav/xsim/glbl.v,1529022454,verilog,,,,glbl,,,,,,,,
+D:/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sim_1/new/riscv_mcu_top_tb.v,1743169240,verilog,,,,riscv_mcu_top_tb,,,../../../../RISCV_FPGA.srcs/sources_1/ip/clk_wiz_sys,,,,,
+D:/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/ip/clk_wiz_sys/clk_wiz_sys.v,1756351340,verilog,,D:/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_alu.v,,clk_wiz_sys,,,../../../../RISCV_FPGA.srcs/sources_1/ip/clk_wiz_sys,,,,,
+D:/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/ip/clk_wiz_sys/clk_wiz_sys_clk_wiz.v,1756351340,verilog,,D:/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/ip/clk_wiz_sys/clk_wiz_sys.v,,clk_wiz_sys_clk_wiz,,,../../../../RISCV_FPGA.srcs/sources_1/ip/clk_wiz_sys,,,,,
+D:/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/ip/tdp_bram/sim/tdp_bram.v,1776826421,verilog,,D:/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/ip/clk_wiz_sys/clk_wiz_sys_clk_wiz.v,,tdp_bram,,,../../../../RISCV_FPGA.srcs/sources_1/ip/clk_wiz_sys,,,,,
+D:/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_alu.v,1742486426,verilog,,D:/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_alu_decode.v,,riscv_alu,,,../../../../RISCV_FPGA.srcs/sources_1/ip/clk_wiz_sys,,,,,
+D:/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_alu_decode.v,1776816850,verilog,,D:/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_cpu.v,,riscv_alu_decode,,,../../../../RISCV_FPGA.srcs/sources_1/ip/clk_wiz_sys,,,,,
+D:/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_cpu.v,1742979400,verilog,,D:/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_imm_gen.v,,riscv_cpu,,,../../../../RISCV_FPGA.srcs/sources_1/ip/clk_wiz_sys,,,,,
+D:/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_imm_gen.v,1742645540,verilog,,D:/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_inst_decode.v,,riscv_imm_gen,,,../../../../RISCV_FPGA.srcs/sources_1/ip/clk_wiz_sys,,,,,
+D:/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_inst_decode.v,1776816742,verilog,,D:/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_pc_gen.v,,riscv_inst_decode,,,../../../../RISCV_FPGA.srcs/sources_1/ip/clk_wiz_sys,,,,,
+D:/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_mcu_tdpram_top.v,1743584002,verilog,,D:/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sim_1/new/riscv_mcu_top_tb.v,,riscv_mcu_tdpram_top,,,../../../../RISCV_FPGA.srcs/sources_1/ip/clk_wiz_sys,,,,,
+D:/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_pc_gen.v,1742639102,verilog,,D:/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_reg_file.v,,riscv_pc_gen,,,../../../../RISCV_FPGA.srcs/sources_1/ip/clk_wiz_sys,,,,,
+D:/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_reg_file.v,1742645874,verilog,,D:/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_mcu_tdpram_top.v,,riscv_reg_file,,,../../../../RISCV_FPGA.srcs/sources_1/ip/clk_wiz_sys,,,,,
