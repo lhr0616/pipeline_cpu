@@ -11,174 +11,613 @@
 source riscv_mcu_tdpram_top.tcl -notrace
 Command: synth_design -top riscv_mcu_tdpram_top -part xc7a100tfgg676-2
 Starting synth_design
+WARNING: [Vivado_Tcl 4-393] The 'Synthesis' target of the following IPs are stale, please generate the output products using the generate_target or synth_ip command before running synth_design.
+D:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/ip/tdp_bram/tdp_bram.xci
+
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Device 21-403] Loading part xc7a100tfgg676-2
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 279980 
-WARNING: [Synth 8-6901] identifier 'ex_mem_alu_data_out' is used before its declaration [D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_cpu.v:224]
-WARNING: [Synth 8-6901] identifier 'ex_mem_alu_data_out' is used before its declaration [D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_cpu.v:231]
+INFO: Helper process launched with PID 63848 
+WARNING: [Synth 8-992] id_ex_reg_din_a is already implicitly declared earlier [D:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_cpu.v:345]
+WARNING: [Synth 8-992] id_ex_reg_din_b is already implicitly declared earlier [D:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_cpu.v:345]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 830.996 ; gain = 239.352
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 830.574 ; gain = 238.289
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'riscv_mcu_tdpram_top' [D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_mcu_tdpram_top.v:23]
+INFO: [Synth 8-6157] synthesizing module 'riscv_mcu_tdpram_top' [D:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_mcu_tdpram_top.v:23]
 	Parameter bitwidth bound to: 32 - type: integer 
-	Parameter data_bram_addr_hi bound to: 1048575 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'clk_wiz_sys' [D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.runs/synth_1/.Xil/Vivado-272752-lhr/realtime/clk_wiz_sys_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_sys' (1#1) [D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.runs/synth_1/.Xil/Vivado-272752-lhr/realtime/clk_wiz_sys_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'riscv_cpu' [D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_cpu.v:23]
+	Parameter DATA_BASE bound to: 1073741824 - type: integer 
+	Parameter DATA_SIZE_BYTES bound to: 1048576 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_sys' [D:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.runs/synth_1/.Xil/Vivado-61552-lhr/realtime/clk_wiz_sys_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_sys' (1#1) [D:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.runs/synth_1/.Xil/Vivado-61552-lhr/realtime/clk_wiz_sys_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'riscv_cpu' [D:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_cpu.v:23]
 	Parameter bitwidth bound to: 32 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'riscv_inst_decode' [D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_inst_decode.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'riscv_inst_decode' (2#1) [D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_inst_decode.v:23]
-INFO: [Synth 8-6157] synthesizing module 'riscv_reg_file' [D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_reg_file.v:23]
+INFO: [Synth 8-6157] synthesizing module 'IFID_reg' [D:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/IFID_reg.sv:3]
 	Parameter bitwidth bound to: 32 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'riscv_reg_file' (3#1) [D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_reg_file.v:23]
-INFO: [Synth 8-6157] synthesizing module 'riscv_alu_decode' [D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_alu_decode.v:23]
-INFO: [Synth 8-226] default block is never used [D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_alu_decode.v:31]
-INFO: [Synth 8-226] default block is never used [D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_alu_decode.v:45]
-INFO: [Synth 8-6155] done synthesizing module 'riscv_alu_decode' (4#1) [D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_alu_decode.v:23]
-INFO: [Synth 8-6157] synthesizing module 'Hazard_detect' [D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/Hazard_detect.sv:23]
-INFO: [Synth 8-6155] done synthesizing module 'Hazard_detect' (5#1) [D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/Hazard_detect.sv:23]
-INFO: [Synth 8-6157] synthesizing module 'IDEX_reg' [D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/IDEX_reg.sv:23]
+	Parameter NOP_INST bound to: 19 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'IFID_reg' (2#1) [D:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/IFID_reg.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'riscv_inst_decode' [D:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_inst_decode.v:23]
+INFO: [Synth 8-226] default block is never used [D:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_inst_decode.v:82]
+INFO: [Synth 8-6155] done synthesizing module 'riscv_inst_decode' (3#1) [D:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_inst_decode.v:23]
+WARNING: [Synth 8-7023] instance 'riscv_inst_decode_inst' of module 'riscv_inst_decode' has 15 connections declared, but only 14 given [D:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_cpu.v:221]
+INFO: [Synth 8-6157] synthesizing module 'riscv_reg_file' [D:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_reg_file.v:23]
 	Parameter bitwidth bound to: 32 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'IDEX_reg' (6#1) [D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/IDEX_reg.sv:23]
-WARNING: [Synth 8-689] width (1) of port connection 'id_ex_reg_wr_idx' does not match port width (5) of module 'IDEX_reg' [D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_cpu.v:199]
-WARNING: [Synth 8-689] width (4) of port connection 'id_ex_data_bram_wr_byte_mask' does not match port width (8) of module 'IDEX_reg' [D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_cpu.v:203]
-WARNING: [Synth 8-689] width (1) of port connection 'id_ex_imm' does not match port width (32) of module 'IDEX_reg' [D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_cpu.v:206]
-WARNING: [Synth 8-7023] instance 'IDEX_reg_inst' of module 'IDEX_reg' has 45 connections declared, but only 44 given [D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_cpu.v:168]
-INFO: [Synth 8-6157] synthesizing module 'riscv_alu' [D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_alu.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'riscv_reg_file' (4#1) [D:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_reg_file.v:23]
+INFO: [Synth 8-6157] synthesizing module 'riscv_alu_decode' [D:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_alu_decode.v:23]
+INFO: [Synth 8-226] default block is never used [D:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_alu_decode.v:31]
+INFO: [Synth 8-226] default block is never used [D:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_alu_decode.v:45]
+INFO: [Synth 8-6155] done synthesizing module 'riscv_alu_decode' (5#1) [D:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_alu_decode.v:23]
+INFO: [Synth 8-6157] synthesizing module 'riscv_hazard_unit' [D:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_hazard_unit.sv:6]
 	Parameter bitwidth bound to: 32 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'riscv_alu' (7#1) [D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_alu.v:23]
-INFO: [Synth 8-6157] synthesizing module 'EXMEM_reg' [D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/EXMEM_reg.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'riscv_hazard_unit' (6#1) [D:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_hazard_unit.sv:6]
+INFO: [Synth 8-6157] synthesizing module 'IDEX_reg' [D:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/IDEX_reg.sv:23]
 	Parameter bitwidth bound to: 32 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'EXMEM_reg' (8#1) [D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/EXMEM_reg.sv:23]
-WARNING: [Synth 8-689] width (1) of port connection 'ex_mem_reg_wr_idx' does not match port width (5) of module 'EXMEM_reg' [D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_cpu.v:269]
-WARNING: [Synth 8-689] width (8) of port connection 'ex_mem_data_bram_wr_byte_mask' does not match port width (4) of module 'EXMEM_reg' [D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_cpu.v:275]
-INFO: [Synth 8-6157] synthesizing module 'MEMWB_reg' [D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/MEMWB_reg.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'IDEX_reg' (7#1) [D:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/IDEX_reg.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'riscv_alu' [D:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_alu.v:23]
 	Parameter bitwidth bound to: 32 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'MEMWB_reg' (9#1) [D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/MEMWB_reg.sv:23]
-INFO: [Synth 8-6157] synthesizing module 'riscv_pc_gen' [D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_pc_gen.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'riscv_alu' (8#1) [D:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_alu.v:23]
+INFO: [Synth 8-6157] synthesizing module 'EXMEM_reg' [D:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/EXMEM_reg.sv:23]
 	Parameter bitwidth bound to: 32 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'riscv_pc_gen' (10#1) [D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_pc_gen.v:23]
-INFO: [Synth 8-6157] synthesizing module 'riscv_imm_gen' [D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_imm_gen.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'EXMEM_reg' (9#1) [D:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/EXMEM_reg.sv:23]
+INFO: [Synth 8-226] default block is never used [D:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_cpu.v:408]
+INFO: [Synth 8-6157] synthesizing module 'MEMWB_reg' [D:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/MEMWB_reg.sv:23]
 	Parameter bitwidth bound to: 32 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'riscv_imm_gen' (11#1) [D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_imm_gen.v:23]
-INFO: [Synth 8-6157] synthesizing module 'Forward_unit' [D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/Forward_unit.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'MEMWB_reg' (10#1) [D:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/MEMWB_reg.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'riscv_pc_gen' [D:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_pc_gen.v:4]
 	Parameter bitwidth bound to: 32 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'Forward_unit' (12#1) [D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/Forward_unit.sv:23]
-WARNING: [Synth 8-3848] Net reg_din_b in module/entity riscv_cpu does not have driver. [D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_cpu.v:96]
-WARNING: [Synth 8-3848] Net mem_wr_en in module/entity riscv_cpu does not have driver. [D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_cpu.v:98]
-WARNING: [Synth 8-3848] Net reg_wr_idx in module/entity riscv_cpu does not have driver. [D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_cpu.v:97]
-WARNING: [Synth 8-3848] Net reg_din_a in module/entity riscv_cpu does not have driver. [D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_cpu.v:95]
-WARNING: [Synth 8-3848] Net imm_to_reg in module/entity riscv_cpu does not have driver. [D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_cpu.v:172]
-WARNING: [Synth 8-3848] Net reg_wr_src in module/entity riscv_cpu does not have driver. [D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_cpu.v:99]
-WARNING: [Synth 8-3848] Net processed_load_data in module/entity riscv_cpu does not have driver. [D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_cpu.v:72]
-INFO: [Synth 8-6155] done synthesizing module 'riscv_cpu' (13#1) [D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_cpu.v:23]
-INFO: [Synth 8-6157] synthesizing module 'tdp_bram' [D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.runs/synth_1/.Xil/Vivado-272752-lhr/realtime/tdp_bram_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'tdp_bram' (14#1) [D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.runs/synth_1/.Xil/Vivado-272752-lhr/realtime/tdp_bram_stub.v:6]
-WARNING: [Synth 8-689] width (30) of port connection 'addra' does not match port width (15) of module 'tdp_bram' [D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_mcu_tdpram_top.v:72]
-WARNING: [Synth 8-689] width (30) of port connection 'addrb' does not match port width (15) of module 'tdp_bram' [D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_mcu_tdpram_top.v:78]
-WARNING: [Synth 8-3848] Net inst_wr_data in module/entity riscv_mcu_tdpram_top does not have driver. [D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_mcu_tdpram_top.v:64]
-INFO: [Synth 8-6155] done synthesizing module 'riscv_mcu_tdpram_top' (15#1) [D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_mcu_tdpram_top.v:23]
-WARNING: [Synth 8-3331] design Forward_unit has unconnected port reg_wr_data_tem[31]
-WARNING: [Synth 8-3331] design Forward_unit has unconnected port reg_wr_data_tem[30]
-WARNING: [Synth 8-3331] design Forward_unit has unconnected port reg_wr_data_tem[29]
-WARNING: [Synth 8-3331] design Forward_unit has unconnected port reg_wr_data_tem[28]
-WARNING: [Synth 8-3331] design Forward_unit has unconnected port reg_wr_data_tem[27]
-WARNING: [Synth 8-3331] design Forward_unit has unconnected port reg_wr_data_tem[26]
-WARNING: [Synth 8-3331] design Forward_unit has unconnected port reg_wr_data_tem[25]
-WARNING: [Synth 8-3331] design Forward_unit has unconnected port reg_wr_data_tem[24]
-WARNING: [Synth 8-3331] design Forward_unit has unconnected port reg_wr_data_tem[23]
-WARNING: [Synth 8-3331] design Forward_unit has unconnected port reg_wr_data_tem[22]
-WARNING: [Synth 8-3331] design Forward_unit has unconnected port reg_wr_data_tem[21]
-WARNING: [Synth 8-3331] design Forward_unit has unconnected port reg_wr_data_tem[20]
-WARNING: [Synth 8-3331] design Forward_unit has unconnected port reg_wr_data_tem[19]
-WARNING: [Synth 8-3331] design Forward_unit has unconnected port reg_wr_data_tem[18]
-WARNING: [Synth 8-3331] design Forward_unit has unconnected port reg_wr_data_tem[17]
-WARNING: [Synth 8-3331] design Forward_unit has unconnected port reg_wr_data_tem[16]
-WARNING: [Synth 8-3331] design Forward_unit has unconnected port reg_wr_data_tem[15]
-WARNING: [Synth 8-3331] design Forward_unit has unconnected port reg_wr_data_tem[14]
-WARNING: [Synth 8-3331] design Forward_unit has unconnected port reg_wr_data_tem[13]
-WARNING: [Synth 8-3331] design Forward_unit has unconnected port reg_wr_data_tem[12]
-WARNING: [Synth 8-3331] design Forward_unit has unconnected port reg_wr_data_tem[11]
-WARNING: [Synth 8-3331] design Forward_unit has unconnected port reg_wr_data_tem[10]
-WARNING: [Synth 8-3331] design Forward_unit has unconnected port reg_wr_data_tem[9]
-WARNING: [Synth 8-3331] design Forward_unit has unconnected port reg_wr_data_tem[8]
-WARNING: [Synth 8-3331] design Forward_unit has unconnected port reg_wr_data_tem[7]
-WARNING: [Synth 8-3331] design Forward_unit has unconnected port reg_wr_data_tem[6]
-WARNING: [Synth 8-3331] design Forward_unit has unconnected port reg_wr_data_tem[5]
-WARNING: [Synth 8-3331] design Forward_unit has unconnected port reg_wr_data_tem[4]
-WARNING: [Synth 8-3331] design Forward_unit has unconnected port reg_wr_data_tem[3]
-WARNING: [Synth 8-3331] design Forward_unit has unconnected port reg_wr_data_tem[2]
-WARNING: [Synth 8-3331] design Forward_unit has unconnected port reg_wr_data_tem[1]
-WARNING: [Synth 8-3331] design Forward_unit has unconnected port reg_wr_data_tem[0]
-WARNING: [Synth 8-3331] design riscv_imm_gen has unconnected port forward_d
-WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port pc_gen_src
-WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port alu_zero_flag
-WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port pc_i[31]
-WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port pc_i[30]
-WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port pc_i[29]
-WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port pc_i[28]
-WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port pc_i[27]
-WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port pc_i[26]
-WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port pc_i[25]
-WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port pc_i[24]
-WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port pc_i[23]
-WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port pc_i[22]
-WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port pc_i[21]
-WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port pc_i[20]
-WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port pc_i[19]
-WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port pc_i[18]
-WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port pc_i[17]
-WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port pc_i[16]
-WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port pc_i[15]
-WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port pc_i[14]
-WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port pc_i[13]
-WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port pc_i[12]
-WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port pc_i[11]
-WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port pc_i[10]
-WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port pc_i[9]
-WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port pc_i[8]
-WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port pc_i[7]
-WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port pc_i[6]
-WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port pc_i[5]
-WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port pc_i[4]
-WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port pc_i[3]
-WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port pc_i[2]
-WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port pc_i[1]
-WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port pc_i[0]
-WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port id_ex_pc_i[31]
-WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port id_ex_pc_i[30]
-WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port id_ex_pc_i[29]
-WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port id_ex_pc_i[28]
-WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port id_ex_pc_i[27]
-WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port id_ex_pc_i[26]
-WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port id_ex_pc_i[25]
-WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port id_ex_pc_i[24]
-WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port id_ex_pc_i[23]
-WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port id_ex_pc_i[22]
-WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port id_ex_pc_i[21]
-WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port id_ex_pc_i[20]
-WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port id_ex_pc_i[19]
-WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port id_ex_pc_i[18]
-WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port id_ex_pc_i[17]
-WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port id_ex_pc_i[16]
-WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port id_ex_pc_i[15]
-WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port id_ex_pc_i[14]
-WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port id_ex_pc_i[13]
-WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port id_ex_pc_i[12]
-WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port id_ex_pc_i[11]
-WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port id_ex_pc_i[10]
-WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port id_ex_pc_i[9]
-WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port id_ex_pc_i[8]
-WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port id_ex_pc_i[7]
-WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port id_ex_pc_i[6]
-WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port id_ex_pc_i[5]
-WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port id_ex_pc_i[4]
-WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port id_ex_pc_i[3]
-WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port id_ex_pc_i[2]
-WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port id_ex_pc_i[1]
-WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port id_ex_pc_i[0]
-WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port pc_last[31]
-INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-TclStackFree: incorrect freePtr. Call out of sequence?
+INFO: [Synth 8-6155] done synthesizing module 'riscv_pc_gen' (11#1) [D:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_pc_gen.v:4]
+INFO: [Synth 8-6157] synthesizing module 'riscv_imm_gen' [D:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_imm_gen.v:23]
+	Parameter bitwidth bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'riscv_imm_gen' (12#1) [D:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_imm_gen.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'riscv_cpu' (13#1) [D:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_cpu.v:23]
+INFO: [Synth 8-6157] synthesizing module 'tdp_bram' [D:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.runs/synth_1/.Xil/Vivado-61552-lhr/realtime/tdp_bram_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'tdp_bram' (14#1) [D:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.runs/synth_1/.Xil/Vivado-61552-lhr/realtime/tdp_bram_stub.v:6]
+WARNING: [Synth 8-689] width (30) of port connection 'addra' does not match port width (15) of module 'tdp_bram' [D:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_mcu_tdpram_top.v:76]
+WARNING: [Synth 8-689] width (30) of port connection 'addrb' does not match port width (15) of module 'tdp_bram' [D:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_mcu_tdpram_top.v:97]
+INFO: [Synth 8-6155] done synthesizing module 'riscv_mcu_tdpram_top' (15#1) [D:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_mcu_tdpram_top.v:23]
+WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port rst_n
+WARNING: [Synth 8-3331] design IDEX_reg has unconnected port mem_to_reg
+WARNING: [Synth 8-3331] design IDEX_reg has unconnected port pc_next[31]
+WARNING: [Synth 8-3331] design IDEX_reg has unconnected port pc_next[30]
+WARNING: [Synth 8-3331] design IDEX_reg has unconnected port pc_next[29]
+WARNING: [Synth 8-3331] design IDEX_reg has unconnected port pc_next[28]
+WARNING: [Synth 8-3331] design IDEX_reg has unconnected port pc_next[27]
+WARNING: [Synth 8-3331] design IDEX_reg has unconnected port pc_next[26]
+WARNING: [Synth 8-3331] design IDEX_reg has unconnected port pc_next[25]
+WARNING: [Synth 8-3331] design IDEX_reg has unconnected port pc_next[24]
+WARNING: [Synth 8-3331] design IDEX_reg has unconnected port pc_next[23]
+WARNING: [Synth 8-3331] design IDEX_reg has unconnected port pc_next[22]
+WARNING: [Synth 8-3331] design IDEX_reg has unconnected port pc_next[21]
+WARNING: [Synth 8-3331] design IDEX_reg has unconnected port pc_next[20]
+WARNING: [Synth 8-3331] design IDEX_reg has unconnected port pc_next[19]
+WARNING: [Synth 8-3331] design IDEX_reg has unconnected port pc_next[18]
+WARNING: [Synth 8-3331] design IDEX_reg has unconnected port pc_next[17]
+WARNING: [Synth 8-3331] design IDEX_reg has unconnected port pc_next[16]
+WARNING: [Synth 8-3331] design IDEX_reg has unconnected port pc_next[15]
+WARNING: [Synth 8-3331] design IDEX_reg has unconnected port pc_next[14]
+WARNING: [Synth 8-3331] design IDEX_reg has unconnected port pc_next[13]
+WARNING: [Synth 8-3331] design IDEX_reg has unconnected port pc_next[12]
+WARNING: [Synth 8-3331] design IDEX_reg has unconnected port pc_next[11]
+WARNING: [Synth 8-3331] design IDEX_reg has unconnected port pc_next[10]
+WARNING: [Synth 8-3331] design IDEX_reg has unconnected port pc_next[9]
+WARNING: [Synth 8-3331] design IDEX_reg has unconnected port pc_next[8]
+WARNING: [Synth 8-3331] design IDEX_reg has unconnected port pc_next[7]
+WARNING: [Synth 8-3331] design IDEX_reg has unconnected port pc_next[6]
+WARNING: [Synth 8-3331] design IDEX_reg has unconnected port pc_next[5]
+WARNING: [Synth 8-3331] design IDEX_reg has unconnected port pc_next[4]
+WARNING: [Synth 8-3331] design IDEX_reg has unconnected port pc_next[3]
+WARNING: [Synth 8-3331] design IDEX_reg has unconnected port pc_next[2]
+WARNING: [Synth 8-3331] design IDEX_reg has unconnected port pc_next[1]
+WARNING: [Synth 8-3331] design IDEX_reg has unconnected port pc_next[0]
+WARNING: [Synth 8-3331] design IDEX_reg has unconnected port pc[31]
+WARNING: [Synth 8-3331] design IDEX_reg has unconnected port pc[30]
+WARNING: [Synth 8-3331] design IDEX_reg has unconnected port pc[29]
+WARNING: [Synth 8-3331] design IDEX_reg has unconnected port pc[28]
+WARNING: [Synth 8-3331] design IDEX_reg has unconnected port pc[27]
+WARNING: [Synth 8-3331] design IDEX_reg has unconnected port pc[26]
+WARNING: [Synth 8-3331] design IDEX_reg has unconnected port pc[25]
+WARNING: [Synth 8-3331] design IDEX_reg has unconnected port pc[24]
+WARNING: [Synth 8-3331] design IDEX_reg has unconnected port pc[23]
+WARNING: [Synth 8-3331] design IDEX_reg has unconnected port pc[22]
+WARNING: [Synth 8-3331] design IDEX_reg has unconnected port pc[21]
+WARNING: [Synth 8-3331] design IDEX_reg has unconnected port pc[20]
+WARNING: [Synth 8-3331] design IDEX_reg has unconnected port pc[19]
+WARNING: [Synth 8-3331] design IDEX_reg has unconnected port pc[18]
+WARNING: [Synth 8-3331] design IDEX_reg has unconnected port pc[17]
+WARNING: [Synth 8-3331] design IDEX_reg has unconnected port pc[16]
+WARNING: [Synth 8-3331] design IDEX_reg has unconnected port pc[15]
+WARNING: [Synth 8-3331] design IDEX_reg has unconnected port pc[14]
+WARNING: [Synth 8-3331] design IDEX_reg has unconnected port pc[13]
+WARNING: [Synth 8-3331] design IDEX_reg has unconnected port pc[12]
+WARNING: [Synth 8-3331] design IDEX_reg has unconnected port pc[11]
+WARNING: [Synth 8-3331] design IDEX_reg has unconnected port pc[10]
+WARNING: [Synth 8-3331] design IDEX_reg has unconnected port pc[9]
+WARNING: [Synth 8-3331] design IDEX_reg has unconnected port pc[8]
+WARNING: [Synth 8-3331] design IDEX_reg has unconnected port pc[7]
+WARNING: [Synth 8-3331] design IDEX_reg has unconnected port pc[6]
+WARNING: [Synth 8-3331] design IDEX_reg has unconnected port pc[5]
+WARNING: [Synth 8-3331] design IDEX_reg has unconnected port pc[4]
+WARNING: [Synth 8-3331] design IDEX_reg has unconnected port pc[3]
+WARNING: [Synth 8-3331] design IDEX_reg has unconnected port pc[2]
+WARNING: [Synth 8-3331] design IDEX_reg has unconnected port pc[1]
+WARNING: [Synth 8-3331] design IDEX_reg has unconnected port pc[0]
+WARNING: [Synth 8-3331] design riscv_inst_decode has unconnected port inst[24]
+WARNING: [Synth 8-3331] design riscv_inst_decode has unconnected port inst[23]
+WARNING: [Synth 8-3331] design riscv_inst_decode has unconnected port inst[22]
+WARNING: [Synth 8-3331] design riscv_inst_decode has unconnected port inst[21]
+WARNING: [Synth 8-3331] design riscv_inst_decode has unconnected port inst[20]
+WARNING: [Synth 8-3331] design riscv_inst_decode has unconnected port inst[19]
+WARNING: [Synth 8-3331] design riscv_inst_decode has unconnected port inst[18]
+WARNING: [Synth 8-3331] design riscv_inst_decode has unconnected port inst[17]
+WARNING: [Synth 8-3331] design riscv_inst_decode has unconnected port inst[16]
+WARNING: [Synth 8-3331] design riscv_inst_decode has unconnected port inst[15]
+WARNING: [Synth 8-3331] design riscv_inst_decode has unconnected port inst[11]
+WARNING: [Synth 8-3331] design riscv_inst_decode has unconnected port inst[10]
+WARNING: [Synth 8-3331] design riscv_inst_decode has unconnected port inst[9]
+WARNING: [Synth 8-3331] design riscv_inst_decode has unconnected port inst[8]
+WARNING: [Synth 8-3331] design riscv_inst_decode has unconnected port inst[7]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 889.684 ; gain = 297.398
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 889.684 ; gain = 297.398
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 889.684 ; gain = 297.398
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 889.684 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/ip/tdp_bram/tdp_bram/tdp_bram_in_context.xdc] for cell 'inst_bram_inst'
+Finished Parsing XDC File [d:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/ip/tdp_bram/tdp_bram/tdp_bram_in_context.xdc] for cell 'inst_bram_inst'
+Parsing XDC File [d:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/ip/tdp_bram/tdp_bram/tdp_bram_in_context.xdc] for cell 'data_bram_inst'
+Finished Parsing XDC File [d:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/ip/tdp_bram/tdp_bram/tdp_bram_in_context.xdc] for cell 'data_bram_inst'
+Parsing XDC File [d:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/ip/clk_wiz_sys/clk_wiz_sys/clk_wiz_sys_in_context.xdc] for cell 'clk_wiz_sys_inst'
+Finished Parsing XDC File [d:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/ip/clk_wiz_sys/clk_wiz_sys/clk_wiz_sys_in_context.xdc] for cell 'clk_wiz_sys_inst'
+Parsing XDC File [D:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/constrs_1/new/mul_para.xdc]
+CRITICAL WARNING: [Constraints 18-1056] Clock 'clk' completely overrides clock 'CLK_FPGA'.
+New: create_clock -period 10.000 -name clk [get_ports CLK_FPGA], [D:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/constrs_1/new/mul_para.xdc:1]
+Previous: create_clock -period 10.000 [get_ports CLK_FPGA], [d:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/ip/clk_wiz_sys/clk_wiz_sys/clk_wiz_sys_in_context.xdc:1]
+Resolution: Review the constraint files and remove the redundant clock definition(s). If the clock constraints are not saved in a file, you can first save the constraints to an XDC file and reload the design once the constraints have been corrected.
+Finished Parsing XDC File [D:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/constrs_1/new/mul_para.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1022.137 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.044 . Memory (MB): peak = 1022.137 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'data_bram_inst' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'inst_bram_inst' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1022.137 ; gain = 429.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tfgg676-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1022.137 ; gain = 429.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for CLK_FPGA. (constraint file  d:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/ip/clk_wiz_sys/clk_wiz_sys/clk_wiz_sys_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for CLK_FPGA. (constraint file  d:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/ip/clk_wiz_sys/clk_wiz_sys/clk_wiz_sys_in_context.xdc, line 4).
+Applied set_property DONT_TOUCH = true for data_bram_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst_bram_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for clk_wiz_sys_inst. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1022.137 ; gain = 429.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1022.137 ; gain = 429.852
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 6     
+	   3 Input     32 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	               32 Bit    Registers := 58    
+	                5 Bit    Registers := 7     
+	                4 Bit    Registers := 4     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 26    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 15    
+	   3 Input     32 Bit        Muxes := 3     
+	   5 Input     32 Bit        Muxes := 1     
+	   6 Input     32 Bit        Muxes := 1     
+	   4 Input     32 Bit        Muxes := 2     
+	   2 Input     31 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 3     
+	   4 Input      5 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	   3 Input      4 Bit        Muxes := 1     
+	   8 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 1     
+	   8 Input      3 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 3     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 50    
+	   5 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module riscv_mcu_tdpram_top 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 4     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input     31 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+Module IFID_reg 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module riscv_inst_decode 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      5 Bit        Muxes := 2     
+	   4 Input      5 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+Module riscv_reg_file 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 32    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 32    
+Module riscv_alu_decode 
+Detailed RTL Component Info : 
++---Muxes : 
+	   3 Input      4 Bit        Muxes := 1     
+	   8 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module riscv_hazard_unit 
+Detailed RTL Component Info : 
++---Muxes : 
+	   3 Input     32 Bit        Muxes := 3     
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+Module IDEX_reg 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 5     
+	                5 Bit    Registers := 4     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module riscv_alu 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   3 Input     32 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
+Module EXMEM_reg 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 4     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module MEMWB_reg 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 4     
+	                5 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
+Module riscv_pc_gen 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Muxes : 
+	   5 Input     32 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
+Module riscv_imm_gen 
+Detailed RTL Component Info : 
++---Muxes : 
+	   6 Input     32 Bit        Muxes := 1     
+	   8 Input      3 Bit        Muxes := 1     
+Module riscv_cpu 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 7     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 8     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 8     
+	   4 Input     32 Bit        Muxes := 2     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 11    
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design riscv_pc_gen has unconnected port rst_n
+WARNING: [Synth 8-3331] design riscv_inst_decode has unconnected port inst[24]
+WARNING: [Synth 8-3331] design riscv_inst_decode has unconnected port inst[23]
+WARNING: [Synth 8-3331] design riscv_inst_decode has unconnected port inst[22]
+WARNING: [Synth 8-3331] design riscv_inst_decode has unconnected port inst[21]
+WARNING: [Synth 8-3331] design riscv_inst_decode has unconnected port inst[20]
+WARNING: [Synth 8-3331] design riscv_inst_decode has unconnected port inst[19]
+WARNING: [Synth 8-3331] design riscv_inst_decode has unconnected port inst[18]
+WARNING: [Synth 8-3331] design riscv_inst_decode has unconnected port inst[17]
+WARNING: [Synth 8-3331] design riscv_inst_decode has unconnected port inst[16]
+WARNING: [Synth 8-3331] design riscv_inst_decode has unconnected port inst[15]
+INFO: [Synth 8-3886] merging instance 'riscv_cpu_inst/IDEX_reg_inst/id_ex_pc_gen_data_reg[0]' (FDRE) to 'riscv_cpu_inst/IDEX_reg_inst/id_ex_pc_i_reg[0]'
+INFO: [Synth 8-3886] merging instance 'riscv_cpu_inst/IDEX_reg_inst/id_ex_data_bram_wr_byte_mask_reg[2]' (FDRE) to 'riscv_cpu_inst/IDEX_reg_inst/id_ex_data_bram_wr_byte_mask_reg[3]'
+INFO: [Synth 8-3886] merging instance 'riscv_cpu_inst/EXMEM_reg_inst/ex_mem_data_bram_wr_byte_mask_reg[2]' (FDRE) to 'riscv_cpu_inst/EXMEM_reg_inst/ex_mem_data_bram_wr_byte_mask_reg[3]'
+INFO: [Synth 8-3886] merging instance 'riscv_cpu_inst/mem_wait_data_bram_wr_byte_mask_reg[3]' (FDRE) to 'riscv_cpu_inst/mem_wait_data_bram_wr_byte_mask_reg[2]'
+INFO: [Synth 8-3886] merging instance 'data_bram_addr_r1_reg[0]' (FD) to 'data_bram_addr_r1_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_bram_addr_r1_reg[1] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1022.137 ; gain = 429.852
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1022.137 ; gain = 429.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1072.105 ; gain = 479.820
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\riscv_cpu_inst/riscv_reg_file_inst/reg_array_reg[0][24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\riscv_cpu_inst/riscv_reg_file_inst/reg_array_reg[0][8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\riscv_cpu_inst/riscv_reg_file_inst/reg_array_reg[0][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\riscv_cpu_inst/riscv_reg_file_inst/reg_array_reg[0][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\riscv_cpu_inst/riscv_reg_file_inst/reg_array_reg[0][25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\riscv_cpu_inst/riscv_reg_file_inst/reg_array_reg[0][9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\riscv_cpu_inst/riscv_reg_file_inst/reg_array_reg[0][17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\riscv_cpu_inst/riscv_reg_file_inst/reg_array_reg[0][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\riscv_cpu_inst/riscv_reg_file_inst/reg_array_reg[0][26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\riscv_cpu_inst/riscv_reg_file_inst/reg_array_reg[0][10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\riscv_cpu_inst/riscv_reg_file_inst/reg_array_reg[0][18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\riscv_cpu_inst/riscv_reg_file_inst/reg_array_reg[0][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\riscv_cpu_inst/riscv_reg_file_inst/reg_array_reg[0][27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\riscv_cpu_inst/riscv_reg_file_inst/reg_array_reg[0][11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\riscv_cpu_inst/riscv_reg_file_inst/reg_array_reg[0][19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\riscv_cpu_inst/riscv_reg_file_inst/reg_array_reg[0][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\riscv_cpu_inst/riscv_reg_file_inst/reg_array_reg[0][28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\riscv_cpu_inst/riscv_reg_file_inst/reg_array_reg[0][12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\riscv_cpu_inst/riscv_reg_file_inst/reg_array_reg[0][20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\riscv_cpu_inst/riscv_reg_file_inst/reg_array_reg[0][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\riscv_cpu_inst/riscv_reg_file_inst/reg_array_reg[0][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\riscv_cpu_inst/riscv_reg_file_inst/reg_array_reg[0][13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\riscv_cpu_inst/riscv_reg_file_inst/reg_array_reg[0][21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\riscv_cpu_inst/riscv_reg_file_inst/reg_array_reg[0][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\riscv_cpu_inst/riscv_reg_file_inst/reg_array_reg[0][30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\riscv_cpu_inst/riscv_reg_file_inst/reg_array_reg[0][14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\riscv_cpu_inst/riscv_reg_file_inst/reg_array_reg[0][22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\riscv_cpu_inst/riscv_reg_file_inst/reg_array_reg[0][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\riscv_cpu_inst/riscv_reg_file_inst/reg_array_reg[0][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\riscv_cpu_inst/riscv_reg_file_inst/reg_array_reg[0][15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\riscv_cpu_inst/riscv_reg_file_inst/reg_array_reg[0][23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\riscv_cpu_inst/riscv_reg_file_inst/reg_array_reg[0][7] )
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 1072.156 ; gain = 479.871
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 1072.156 ; gain = 479.871
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 1072.156 ; gain = 479.871
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 1072.156 ; gain = 479.871
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 1072.156 ; gain = 479.871
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 1072.156 ; gain = 479.871
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 1072.156 ; gain = 479.871
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |clk_wiz_sys   |         1|
+|2     |tdp_bram      |         2|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+------------+------+
+|      |Cell        |Count |
++------+------------+------+
+|1     |clk_wiz_sys |     1|
+|2     |tdp_bram    |     1|
+|3     |tdp_bram__2 |     1|
+|4     |CARRY4      |    56|
+|5     |LUT1        |     4|
+|6     |LUT2        |   116|
+|7     |LUT3        |   240|
+|8     |LUT4        |   223|
+|9     |LUT5        |   322|
+|10    |LUT6        |   857|
+|11    |MUXF7       |   288|
+|12    |MUXF8       |   128|
+|13    |FDCE        |   992|
+|14    |FDRE        |   831|
+|15    |FDSE        |     6|
+|16    |IOBUF       |    32|
++------+------------+------+
+
+Report Instance Areas: 
++------+------------------------+---------------+------+
+|      |Instance                |Module         |Cells |
++------+------------------------+---------------+------+
+|1     |top                     |               |  4225|
+|2     |  riscv_cpu_inst        |riscv_cpu      |  3936|
+|3     |    EXMEM_reg_inst      |EXMEM_reg      |   409|
+|4     |    IDEX_reg_inst       |IDEX_reg       |   907|
+|5     |    IFID_reg_inst       |IFID_reg       |   193|
+|6     |    MEMWB_reg_inst      |MEMWB_reg      |   153|
+|7     |    riscv_reg_file_inst |riscv_reg_file |  1953|
++------+------------------------+---------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 1072.156 ; gain = 479.871
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 11 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:27 . Memory (MB): peak = 1072.156 ; gain = 347.418
+Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 1072.156 ; gain = 479.871
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 1072.156 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 504 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1072.156 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 32 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 32 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+83 Infos, 100 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 1072.156 ; gain = 771.383
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1072.156 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'D:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.runs/synth_1/riscv_mcu_tdpram_top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file riscv_mcu_tdpram_top_utilization_synth.rpt -pb riscv_mcu_tdpram_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed May  6 11:45:49 2026...

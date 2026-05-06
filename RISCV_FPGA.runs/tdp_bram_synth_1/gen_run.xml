@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="tdp_bram_synth_1" LaunchPart="xc7a100tfgg676-2" LaunchTime="1776826421">
+<GenRun Id="tdp_bram_synth_1" LaunchPart="xc7a100tfgg676-2" LaunchTime="1778033061">
   <File Type="PA-TCL" Name="tdp_bram.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="tdp_bram_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="tdp_bram_reports.tcl"/>
   <File Type="RDS-RDS" Name="tdp_bram.vds"/>
   <File Type="RDS-UTIL" Name="tdp_bram_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="tdp_bram_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="tdp_bram.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="tdp_bram_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="tdp_bram_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/tdp_bram">
     <File Path="$PSRCDIR/sources_1/ip/tdp_bram/tdp_bram.xci">
       <FileInfo>

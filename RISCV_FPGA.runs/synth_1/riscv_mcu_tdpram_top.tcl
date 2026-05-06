@@ -17,45 +17,47 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param chipscope.maxJobs 4
 create_project -in_memory -part xc7a100tfgg676-2
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.cache/wt [current_project]
-set_property parent.project_path D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.xpr [current_project]
+set_property webtalk.parent_dir D:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.cache/wt [current_project]
+set_property parent.project_path D:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo d:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.cache/ip [current_project]
+set_property ip_output_repo d:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-add_files D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/test6_tdp.coe
-add_files D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.sim/sim_1/behav/xsim/test7_tdp.coe
-add_files D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.sim/sim_1/behav/xsim/test6_tdp.coe
+add_files D:/FPGA/RISCV_FPGA_TrueDualPort_Example/test6_tdp.coe
+add_files D:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.sim/sim_1/behav/xsim/test7_tdp.coe
+add_files D:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.sim/sim_1/behav/xsim/test6_tdp.coe
+add_files D:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.sim/sim_1/behav/xsim/test7.coe
 read_verilog -library xil_defaultlib -sv {
-  D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_alu.v
-  D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_alu_decode.v
-  D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_cpu.v
-  D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_imm_gen.v
-  D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_inst_decode.v
-  D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_pc_gen.v
-  D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_reg_file.v
-  D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/constants.sv
-  D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/Hazard_detect.sv
-  D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/IDEX_reg.sv
-  D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/EXMEM_reg.sv
-  D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/MEMWB_reg.sv
-  D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/Forward_unit.sv
+  D:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_alu.v
+  D:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_alu_decode.v
+  D:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_cpu.v
+  D:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_imm_gen.v
+  D:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_inst_decode.v
+  D:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_pc_gen.v
+  D:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_reg_file.v
+  D:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/constants.sv
+  D:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/IDEX_reg.sv
+  D:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/EXMEM_reg.sv
+  D:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/MEMWB_reg.sv
+  D:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_hazard_unit.sv
+  D:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/IFID_reg.sv
 }
-read_verilog -library xil_defaultlib D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_mcu_tdpram_top.v
-read_ip -quiet D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/ip/tdp_bram/tdp_bram.xci
-set_property used_in_implementation false [get_files -all d:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/ip/tdp_bram/tdp_bram_ooc.xdc]
+read_verilog -library xil_defaultlib D:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/new/riscv_mcu_tdpram_top.v
+read_ip -quiet D:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/ip/tdp_bram/tdp_bram.xci
+set_property used_in_implementation false [get_files -all d:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/ip/tdp_bram/tdp_bram_ooc.xdc]
 
-read_ip -quiet D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/ip/clk_wiz_sys/clk_wiz_sys.xci
-set_property used_in_implementation false [get_files -all d:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/ip/clk_wiz_sys/clk_wiz_sys_board.xdc]
-set_property used_in_implementation false [get_files -all d:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/ip/clk_wiz_sys/clk_wiz_sys.xdc]
-set_property used_in_implementation false [get_files -all d:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/ip/clk_wiz_sys/clk_wiz_sys_ooc.xdc]
+read_ip -quiet D:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/ip/clk_wiz_sys/clk_wiz_sys.xci
+set_property used_in_implementation false [get_files -all d:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/ip/clk_wiz_sys/clk_wiz_sys_board.xdc]
+set_property used_in_implementation false [get_files -all d:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/ip/clk_wiz_sys/clk_wiz_sys.xdc]
+set_property used_in_implementation false [get_files -all d:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/sources_1/ip/clk_wiz_sys/clk_wiz_sys_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -65,8 +67,8 @@ set_property used_in_implementation false [get_files -all d:/大三/大三下/CPU/RIS
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/constrs_1/new/mul_para.xdc
-set_property used_in_implementation false [get_files D:/大三/大三下/CPU/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/constrs_1/new/mul_para.xdc]
+read_xdc D:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/constrs_1/new/mul_para.xdc
+set_property used_in_implementation false [get_files D:/FPGA/RISCV_FPGA_TrueDualPort_Example/RISCV_FPGA.srcs/constrs_1/new/mul_para.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]

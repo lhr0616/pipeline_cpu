@@ -38,10 +38,25 @@ module riscv_reg_file #(
     
     initial reg_array[0] = 0; // Ensure x0 is initialized to 0
 
-    // Read ports (combinational)
+    // Read ports (combinational with internal forwarding)
     always_comb begin
-        rd_dout_1 = (rd_idx_1 == 0) ? 0 : reg_array[rd_idx_1]; // Read data for rd_idx_1 (x0 always reads as 0)
-        rd_dout_2 = (rd_idx_2 == 0) ? 0 : reg_array[rd_idx_2]; // Read data for rd_idx_2 (x0 always reads as 0)
+        // Forwarding logic: if reading and writing to the same register in the same cycle, 
+        // return the data being written.
+        if (rd_idx_1 == 0) begin
+            rd_dout_1 = 0;
+        end else if (wr_en && (wr_idx == rd_idx_1)) begin
+            rd_dout_1 = wr_data;
+        end else begin
+            rd_dout_1 = reg_array[rd_idx_1];
+        end
+
+        if (rd_idx_2 == 0) begin
+            rd_dout_2 = 0;
+        end else if (wr_en && (wr_idx == rd_idx_2)) begin
+            rd_dout_2 = wr_data;
+        end else begin
+            rd_dout_2 = reg_array[rd_idx_2];
+        end
     end
 
     // Write port (synchronous)
